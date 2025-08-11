@@ -313,4 +313,3 @@ Este projeto é de uso educacional e de pesquisa. Para uso comercial ou clínico
 
 ---
 
-*Última atualização: Dezembro 2024*
