@@ -1,0 +1,82 @@
+<!-- templates/formulario.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Saúde</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulário de Saúde</h2>
+    <form method="POST" action="/">
+      <label for="genero">Gênero</label>
+      <select name="genero" required>
+        <option value="">Selecione</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+
+      <label for="idade">Idade</label>
+      <input type="number" name="idade" required>
+
+      <label for="hipertensao">Hipertensão</label>
+      <select name="hipertensao" required>
+        <option value="">Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="cardiaca">Doença cardíaca</label>
+      <select name="cardiaca" required>
+        <option value="">Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="casado">Casado</label>
+      <select name="casado" required>
+        <option value="">Selecione</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <label for="trabalho">Tipo de trabalho</label>
+      <select name="trabalho" required>
+        <option value="">Selecione</option>
+        <option value="crianca">Criança</option>
+        <option value="funcionario_publico">Funcionário público</option>
+        <option value="nunca_trabalhou">Nunca trabalhou</option>
+        <option value="area_privada">Área privada</option>
+        <option value="autonomo">Autônomo</option>
+      </select>
+
+      <label for="residencia">Tipo de residência</label>
+      <select name="residencia" required>
+        <option value="">Selecione</option>
+        <option value="rural">Rural</option>
+        <option value="urbano">Urbano</option>
+      </select>
+
+      <label for="glicose">Nível de glicose (mg/dL)</label>
+      <input type="number" name="glicose" required>
+
+      <label for="imc">IMC</label>
+      <input type="number" step="0.1" name="imc" required>
+
+      <label for="fumante">Status de fumante</label>
+      <select name="fumante" required>
+        <option value="">Selecione</option>
+        <option value="ex_fumante">Ex-fumante</option>
+        <option value="nunca_fumou">Nunca fumou</option>
+        <option value="fuma">Fuma</option>
+      </select>
+
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>

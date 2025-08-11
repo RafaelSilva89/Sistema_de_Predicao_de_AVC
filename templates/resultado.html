@@ -1,0 +1,32 @@
+<!-- templates/resultado.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado de Probabilidade de AVC</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Resultado da Avaliação</h2>
+
+    <p><strong>Gênero:</strong> {{ dados.genero }}</p>
+    <p><strong>Idade:</strong> {{ dados.idade }}</p>
+    <p><strong>Hipertensão:</strong> {{ dados.hipertensao }}</p>
+    <p><strong>Doença cardíaca:</strong> {{ dados.cardiaca }}</p>
+    <p><strong>Casado:</strong> {{ dados.casado }}</p>
+    <p><strong>Tipo de trabalho:</strong> {{ dados.trabalho }}</p>
+    <p><strong>Tipo de residência:</strong> {{ dados.residencia }}</p>
+    <p><strong>Nível de glicose:</strong> {{ dados.glicose }} mg/dL</p>
+    <p><strong>IMC:</strong> {{ dados.imc }}</p>
+    <p><strong>Status de fumante:</strong> {{ dados.fumante }}</p>
+
+    <hr>
+
+    <h3>🧠 Probabilidade estimada de desenvolver AVC:</h3>
+    <p style="font-size: 24px; color: #d9534f;"><strong>{{ probabilidade }}%</strong></p>
+
+    <a href="/" style="display: block; margin-top: 20px; text-align: center;">← Voltar ao formulário</a>
+  </div>
+</body>
+</html>
